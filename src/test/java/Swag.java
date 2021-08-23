@@ -16,7 +16,7 @@ public class Swag {
     public static final By CHECKOUT_POSTAL_CODE =By.xpath("//input[@id='postal-code']");
     public static final By CONTINUE =By.xpath("//input[@id='continue']");
     public static final By FINISH= By.xpath("//button[@id='finish']");
-    public static final By ORDER_CONFIRMATION= By.xpath("//*[@id=\"checkout_complete_container\"]/div/text()");
+    public static final By ORDER_CONFIRMATION= By.xpath("//*[@id=\"checkout_complete_container\"]/h2");
 
 
 
@@ -41,8 +41,7 @@ public class Swag {
         driver.findElement(CONTINUE).click();
         driver.findElement(FINISH).click();
         String order_confirmation = driver.findElement(ORDER_CONFIRMATION).getText();
-        Assertions.assertEquals("Your order has been dispatched, and will arrive just as fast as the pony can get there!\n" +
-                "Pony Express", order_confirmation);
+        Assertions.assertEquals("THANK YOU FOR YOUR ORDER", order_confirmation);
         driver.close();
 
 

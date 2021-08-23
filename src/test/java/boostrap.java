@@ -32,7 +32,7 @@ class bootsrap {
         List<String> results = new ArrayList<String>();
         List<WebElement> tables = driver.findElements(TABLES);
         for (WebElement element : tables) {
-            List<WebElement> cells = element.findElements(By.xpath("./tr/td[1"));
+            List<WebElement> cells = element.findElements(By.xpath("./tr/td[1]"));
             for (WebElement cell : cells) {
                 String text = cell.getText();
                 results.add(text);

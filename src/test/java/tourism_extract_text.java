@@ -2,6 +2,8 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -15,23 +17,21 @@ public class tourism_extract_text {
     public static final By FINANCIAL_ARTICLE = By.xpath("/html/body/div[1]/div[1]/div/div/main/article/div/div/div/section[1]/div/div/div/div/div/div[2]/div/div/div/div/a");
     public static final By FINANCIAL_ARTICLE_TEXT = By.xpath("//div[@class='entry-content clear']");
 
-    public static void skiing() {
+    public static void skiing() throws IOException {
         WebDriver driver = Util.getDriver();
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(WEBSITE_TEXT));
         WebElement ski_text = driver.findElement(WEBSITE_TEXT);
         String ski_description = ski_text.getText();
-        File file = new File("ski.txt");
-        try {
-            FileUtils.writeStringToFile(file, ski_description, Charset.defaultCharset());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        FileWriter files = new FileWriter("names.txt", true);
+        files.write(ski_description);
+        files.close();
     }
+}
 
-
-    public static void business_new_page_extract_text() throws IOException {
 
 //https://websitedemos.net/business-magazine-04/
-        WebDriver driver = Util.getDriver();
+     /*   WebDriver drivers = Util.getDriver();
         WebElement business_article = driver.findElement(FINANCIAL_ARTICLE);
         business_article.click();
         WebElement article_text = driver.findElement(FINANCIAL_ARTICLE_TEXT);
@@ -41,3 +41,4 @@ public class tourism_extract_text {
         file.close();
     }
 }
+*/

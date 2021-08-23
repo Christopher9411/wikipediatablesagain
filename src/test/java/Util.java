@@ -19,7 +19,7 @@ public class Util {
             options.setExperimentalOption("useAutomationExtension", true);
             options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
             driver = new ChromeDriver(options);
-            driver.get("https://websitedemos.net/business-magazine-04/");
+            driver.get("https://demo.provost.utoronto.ca/theme-features/per-page-options/bootstrap-tables/");
             driver.manage().deleteAllCookies();
 
         }

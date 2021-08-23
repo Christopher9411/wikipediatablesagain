@@ -112,15 +112,38 @@ public class TableTest {
 }
 
 @Test
-    public void summer(){
+    public void summer() throws IOException {
         tourism_extract_text.skiing();
 }
 
 
 @Test
     public void finances() throws IOException {
-        tourism_extract_text.business_new_page_extract_text();
+      //  tourism_extract_text.business_new_page_extract_text();
 }
+
+
+@Test
+    public void alert(){
+        JavaScriptconfirmbox.alert_box();
+}
+
+
+@Test
+    public void loopandprint() throws IOException {
+            W3SCHOOLTABLE.w3school();
+
+
+}
+
+@Test
+    public void table_extract_text() throws IOException {
+        ExtractTableText.iterate_table();
+}
+
+
+
+
 
 
 }
