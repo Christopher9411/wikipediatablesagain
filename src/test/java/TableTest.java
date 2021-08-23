@@ -1,6 +1,7 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,6 +17,110 @@ public class TableTest {
         expected.add("3");
         Assertions.assertEquals(expected, Kristóf);
     }
+
+
+
+
+@Test
+    public void tabletesting2(){
+        Table.table_loop();
+}
+
+
+
+@Test
+    public void demoblaze(){
+        Demoblaze.purchase();
+
+
+}
+
+@Test
+    public void itcoffee(){
+        Itcafé.itmethod();
+
+
+}
+
+
+@Test
+    public void table_loop3(){
+   Table.table_loop3();
+
+
+
+}
+
+@Test
+    public void writing() throws IOException {
+        ExtractText.write();
+
+}
+
+@Test
+    public void alert_click(){
+        alert.alertwindow();
+}
+
+
+@Test
+    public void acme(){
+        ACME.acme_site();
+}
+
+@Test
+    public void book_reading(){
+        compendium.booking();
+}
+
+
+@Test
+    public void chan(){
+        chan.fourchan();
+}
+
+@Test
+    public void swagging(){
+        Swag.swagger();
+}
+
+
+
+@Test
+    public void bootstrap(){
+        bootsrap.tables();
+
+}
+
+@Test
+    public void lopped3(){
+        bootsrap.table_looped();
+}
+
+
+@Test
+    public void looped4() throws IOException {
+        Table.table_loop4();
+    }
+
+
+
+
+@Test
+    public void hv_article(){
+        hvg.news();
+}
+
+@Test
+    public void summer(){
+        tourism_extract_text.skiing();
+}
+
+
+@Test
+    public void finances() throws IOException {
+        tourism_extract_text.business_new_page_extract_text();
+}
 
 
 }
