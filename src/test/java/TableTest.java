@@ -171,4 +171,10 @@ public class TableTest {
         AstraZeneca.medicine();
 }
 
+
+@Test
+  public void JavaScript(){
+        JavaScriptAlertBox.alert_click();
+}
+
 }

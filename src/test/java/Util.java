@@ -19,7 +19,7 @@ public class Util {
             options.setExperimentalOption("useAutomationExtension", true);
             options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
             driver = new ChromeDriver(options);
-            driver.get("https://www.astrazeneca.com/country-sites/hungary.html");
+            driver.get("https://www.seleniumeasy.com/test/javascript-alert-box-demo.html");
             driver.manage().deleteAllCookies();
 
         }
