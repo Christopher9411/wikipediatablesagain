@@ -20,10 +20,11 @@ public class Google {
         input.sendKeys("autó");
         WebElement search_button =driver.findElement(SEARCH_BUTTON);
         search_button.click();
+        driver.switchTo().alert().accept();
         WebElement search_result = driver.findElement(SEARCH_RESULT);
         search_result.click();
         Select select= new Select( driver.findElement(BRAND));
-        select.selectByVisibleText("ABARTH");
+        select.selectByValue("ABARTH");
         WebElement car_search = driver.findElement(CAR_SEARCH);
         car_search.click();
 

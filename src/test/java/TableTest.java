@@ -148,6 +148,9 @@ public class TableTest {
 
 
 
-
+@Test
+    public void gaming(){
+        Steam.buy_checkout();
+}
 
 }
