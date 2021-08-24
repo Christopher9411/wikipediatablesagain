@@ -165,4 +165,10 @@ public class TableTest {
         Startlap.start();
 }
 
+
+@Test
+    public void Astra() throws IOException {
+        AstraZeneca.medicine();
+}
+
 }
