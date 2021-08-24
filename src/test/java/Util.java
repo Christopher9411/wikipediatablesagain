@@ -19,7 +19,7 @@ public class Util {
             options.setExperimentalOption("useAutomationExtension", true);
             options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
             driver = new ChromeDriver(options);
-            driver.get("https://demo.provost.utoronto.ca/theme-features/per-page-options/bootstrap-tables/");
+            driver.get("https://www.google.com/webhp?hl=hu&ictx=2&sa=X&ved=0ahUKEwi1s6Tfm8fyAhXI3oUKHXBHC6IQPQgI");
             driver.manage().deleteAllCookies();
 
         }

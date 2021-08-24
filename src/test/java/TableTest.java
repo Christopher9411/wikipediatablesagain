@@ -141,6 +141,10 @@ public class TableTest {
         ExtractTableText.iterate_table();
 }
 
+@Test
+    public void search(){
+        Google.Google_search_button();
+}
 
 
 
