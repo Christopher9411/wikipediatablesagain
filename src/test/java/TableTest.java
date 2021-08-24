@@ -153,4 +153,16 @@ public class TableTest {
         Steam.buy_checkout();
 }
 
+
+@Test //valamiért ez nem fut le...
+    public void data_bonanza(){
+
+}
+
+
+@Test
+    public void Startlap(){
+        Startlap.start();
+}
+
 }

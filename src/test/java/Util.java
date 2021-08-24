@@ -19,7 +19,7 @@ public class Util {
             options.setExperimentalOption("useAutomationExtension", true);
             options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
             driver = new ChromeDriver(options);
-            driver.get("https://store.steampowered.com/?l=hungarian");
+            driver.get("https://www.startlap.hu/");
             driver.manage().deleteAllCookies();
 
         }
