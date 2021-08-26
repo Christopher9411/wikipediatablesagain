@@ -19,162 +19,185 @@ public class TableTest {
     }
 
 
-
-
-@Test
-    public void tabletesting2(){
+    @Test
+    public void tabletesting2() {
         Table.table_loop();
-}
+    }
 
 
-
-@Test
-    public void demoblaze(){
+    @Test
+    public void demoblaze() {
         Demoblaze.purchase();
 
 
-}
+    }
 
-@Test
-    public void itcoffee(){
+    @Test
+    public void itcoffee() {
         Itcafé.itmethod();
 
 
-}
+    }
 
 
-@Test
-    public void table_loop3(){
-   Table.table_loop3();
+    @Test
+    public void table_loop3() {
+        Table.table_loop3();
 
 
+    }
 
-}
-
-@Test
+    @Test
     public void writing() throws IOException {
         ExtractText.write();
 
-}
+    }
 
-@Test
-    public void alert_click(){
+    @Test
+    public void alert_click() {
         alert.alertwindow();
-}
+    }
 
 
-@Test
-    public void acme(){
+    @Test
+    public void acme() {
         ACME.acme_site();
-}
+    }
 
-@Test
-    public void book_reading(){
+    @Test
+    public void book_reading() {
         compendium.booking();
-}
+    }
 
 
-@Test
-    public void chan(){
+    @Test
+    public void chan() {
         chan.fourchan();
-}
+    }
 
-@Test
-    public void swagging(){
+    @Test
+    public void swagging() {
         Swag.swagger();
-}
+    }
 
 
-
-@Test
-    public void bootstrap(){
+    @Test
+    public void bootstrap() {
         bootsrap.tables();
 
-}
+    }
 
-@Test
-    public void lopped3(){
+    @Test
+    public void lopped3() {
         bootsrap.table_looped();
-}
+    }
 
 
-@Test
+    @Test
     public void looped4() throws IOException {
         Table.table_loop4();
     }
 
 
-
-
-@Test
-    public void hv_article(){
+    @Test
+    public void hv_article() {
         hvg.news();
-}
+    }
 
-@Test
+    @Test
     public void summer() throws IOException {
         tourism_extract_text.skiing();
-}
+    }
 
 
-@Test
+    @Test
     public void finances() throws IOException {
-      //  tourism_extract_text.business_new_page_extract_text();
-}
+        //  tourism_extract_text.business_new_page_extract_text();
+    }
 
 
-@Test
-    public void alert(){
+    @Test
+    public void alert() {
         JavaScriptconfirmbox.alert_box();
-}
+    }
 
 
-@Test
+    @Test
     public void loopandprint() throws IOException {
-            W3SCHOOLTABLE.w3school();
+        W3SCHOOLTABLE.w3school();
 
 
-}
+    }
 
-@Test
+    @Test
     public void table_extract_text() throws IOException {
         ExtractTableText.iterate_table();
-}
+    }
 
-@Test
-    public void search(){
+    @Test
+    public void search() {
         Google.Google_search_button();
-}
+    }
 
 
-
-@Test
-    public void gaming(){
+    @Test
+    public void gaming() {
         Steam.buy_checkout();
-}
+    }
 
 
-@Test //valamiért ez nem fut le...
-    public void data_bonanza(){
+    @Test //valamiért ez nem fut le...
+    public void data_bonanza() {
 
-}
+    }
 
 
-@Test
-    public void Startlap(){
+    @Test
+    public void Startlap() {
         Startlap.start();
-}
+    }
 
 
-@Test
+    @Test
     public void Astra() throws IOException {
         AstraZeneca.medicine();
-}
+    }
 
 
-@Test
-  public void JavaScript(){
+    @Test
+    public void JavaScript() {
         JavaScriptAlertBox.alert_click();
-}
+    }
+
+
+    @Test
+    public void NFR() {
+        NRF.iteration();
+
+    }
+
+    @Test
+    public void NRF2() {
+        NRF.iteration2();
+    }
+
+
+    @Test
+    public void table() {
+        tableloop.table_iteration();
+    }
+
+    @Test
+    public void tabl2(){
+        tableloop.table_iteration2();
+    }
+
+
+    @Test
+    public void paginage() throws IOException {
+            Pagination.pagin();
+
+    }
+
 
 }
