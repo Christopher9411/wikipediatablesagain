@@ -19,7 +19,7 @@ public class Util {
             options.setExperimentalOption("useAutomationExtension", true);
             options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
             driver = new ChromeDriver(options);
-            driver.get("https://barter.vg/");
+            driver.get("https://demoqa.com/");
             driver.manage().deleteAllCookies();
 
         }

@@ -214,6 +214,17 @@ public void barter(){
 }
 
 
+@Test
+public void four(){
+        fourfourfour.negy();
+}
+
+
+@Test
+public void ToolsQA(){
+        ToolsQA.tool();
+}
+
 
 @AfterEach
 public void close(){
