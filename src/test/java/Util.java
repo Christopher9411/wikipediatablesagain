@@ -19,7 +19,7 @@ public class Util {
             options.setExperimentalOption("useAutomationExtension", true);
             options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
             driver = new ChromeDriver(options);
-            driver.get("https://www.seleniumeasy.com/test/table-sort-search-demo.html");
+            driver.get("https://barter.vg/");
             driver.manage().deleteAllCookies();
 
         }

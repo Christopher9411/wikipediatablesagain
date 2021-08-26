@@ -1,12 +1,14 @@
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.WebDriver;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class TableTest {
-
+    WebDriver driver = Util.getDriver();
     @Test
     public void tabletesting() {
         Table table = new Table();
@@ -200,4 +202,21 @@ public class TableTest {
     }
 
 
+    @Test
+    public void JavaScriptAlert(){
+        JavaScriptAlertBoxConfirm.confirm();
+    }
+
+
+@Test
+public void barter(){
+        Bartervg.bartering();
+}
+
+
+
+@AfterEach
+public void close(){
+    driver.quit();
+}
 }
