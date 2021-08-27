@@ -6,7 +6,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 //https://demoqa.com/
 public class ToolsQA {
-    public static final By MENUBOOK = By.cssSelector("div.card:nth-child(6) > div:nth-child(1) > div");
+    public static final By MENUBOOK = By.xpath("//*[@id=\"app\"]/div/div/div[2]/div/div[6]/div");
     public static final By INPUT_FIELD = By.xpath("//input[@id='searchBox']");
 
 

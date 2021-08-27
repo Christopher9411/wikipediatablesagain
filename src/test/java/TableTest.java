@@ -225,6 +225,18 @@ public void ToolsQA(){
         ToolsQA.tool();
 }
 
+@Test
+public void Gamivo(){
+        Gamivo.shopping();
+}
+
+
+@Test
+public void indiana(){
+        indiana_edu.indiana();
+}
+
+
 
 @AfterEach
 public void close(){
