@@ -234,12 +234,66 @@ public void Gamivo(){
 @Test
 public void indiana(){
         indiana_edu.indiana();
+        indiana_edu.text();
+}
+
+
+@Test
+public void indiana_write_to_file() throws IOException {
+indiana_edu.table_write_to_file();
+}
+
+
+@Test
+public void SeleniumEasy(){
+        SeleniumEasy.seleniumsum();
+}
+
+@Test
+public void SeleniumSingleInput(){
+        SeleniumEasy.inputfield();
+}
+
+
+@Test
+public void alertwin() throws InterruptedException {
+        SeleniumEasy.alertwindow();
+
+}
+
+
+@Test
+public void magyarnarancs(){}
+   // hungarian.magyar();
+
+
+
+
+@Test
+    public void IKK(){
+        IKK.menuloop();
+        IKK.clickOnNewsArticle("Pont Ott Parti");
+
+}
+
+@Test
+    public void hvg_menu(){
+        hvg.clickonmenu();
+}
+
+
+@Test
+public void digital() {
+    eDigital.open_menu();
+    eDigital.shopper("Könyv & Irodatechnika");
+    eDigital.browse();
 }
 
 
 
-@AfterEach
-public void close(){
-    driver.quit();
-}
+
+
+
+
+
 }

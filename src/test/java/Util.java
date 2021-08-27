@@ -19,7 +19,7 @@ public class Util {
             options.setExperimentalOption("useAutomationExtension", true);
             options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
             driver = new ChromeDriver(options);
-            driver.get("https://info.sice.indiana.edu/~hrosenba/Demo/Demo4.html");
+            driver.get("https://edigital.hu/fooldal?");
             driver.manage().deleteAllCookies();
 
         }
