@@ -37,13 +37,11 @@ class Demoblaze {
     private static final By COUNTRY = By.xpath(" //input[@id='country']");
     private static final By CITY = By.xpath(" //input[@id='city']");
     private static final By CARD = By.xpath(" //input[@id='card']");
-    private static final By MONTH =By.xpath(" //input[@id='month']");
+    private static final By MONTH = By.xpath(" //input[@id='month']");
     private static final By YEAR = By.xpath(" //input[@id='year']");
     private static final By PURCHASE = By.xpath(" //*[contains(text(),'Purchase')]");
     private static final By CONFIRM_OKAY = By.xpath(" //*[contains(text(),'OK')]");
     private static final By CART = By.xpath("//*[@id='cartur']");
-
-
 
 
     public static void menu() {
@@ -62,24 +60,22 @@ class Demoblaze {
     }
 
 
-
     public static void main(String[] args) {
         driver.get("https://www.demoblaze.com/");
-        List<WebElement>allLinks = driver.findElements(By.tagName("a"));
+        List<WebElement> allLinks = driver.findElements(By.tagName("a"));
         for (WebElement links : allLinks) {
-            System.out.println(links.getText() +"-"+ links.getAttribute("href"));
+            System.out.println(links.getText() + "-" + links.getAttribute("href"));
 
 
         }
     }
 
 
-
     public static void contact_form() {
         driver.get("https://www.demoblaze.com/index.html");
         WebElement support = driver.findElement(SUPPORT);
         support.click();
-        WebDriverWait wait = new WebDriverWait(driver,5);
+        WebDriverWait wait = new WebDriverWait(driver, 5);
         wait.until(ExpectedConditions.visibilityOfElementLocated(RECIPIENT_EMAIL));
         WebElement email = driver.findElement(RECIPIENT_EMAIL);
         email.sendKeys("teszt@123.com");
@@ -111,7 +107,7 @@ class Demoblaze {
     }
 
 
-    public static void  extract_text(){
+    public static void extract_text() {
         WebDriverWait wait = new WebDriverWait(driver, 4);
         wait.until(ExpectedConditions.visibilityOfElementLocated(SONY_LAPTOP));
         WebElement laptop = driver.findElement(SONY_LAPTOP);
@@ -123,23 +119,21 @@ class Demoblaze {
         String laptop_text = laptop_description.getText();
 
         File f = new File("savetxt.txt");
-        try{
+        try {
             FileUtils.writeStringToFile(f, laptop_text, Charset.defaultCharset());
-        }catch(IOException exc){
+        } catch (IOException exc) {
             exc.printStackTrace();
         }
         driver.quit();
     }
 
 
-
-
-    public static void purchase(){
+    public static void purchase() {
         driver.get("https://www.demoblaze.com/index.html#");
-        WebDriverWait waiting = new WebDriverWait(driver,5);
+        WebDriverWait waiting = new WebDriverWait(driver, 5);
         waiting.until(ExpectedConditions.visibilityOfElementLocated(LUMIA_PHONE));
         driver.findElement(LUMIA_PHONE).click();
-        WebDriverWait rest = new WebDriverWait(driver,5);
+        WebDriverWait rest = new WebDriverWait(driver, 5);
         rest.until(ExpectedConditions.visibilityOfElementLocated(ADD_TO_CART));
         driver.findElement(ADD_TO_CART).click();
         WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -147,7 +141,7 @@ class Demoblaze {
         driver.switchTo().alert().accept();
         driver.findElement(CART).click();
         driver.findElement(PLACE_ORDER).click();
-        WebDriverWait sleep = new WebDriverWait(driver,5);
+        WebDriverWait sleep = new WebDriverWait(driver, 5);
         sleep.until(ExpectedConditions.visibilityOfElementLocated(NAME));
         driver.findElement(NAME).sendKeys("Thomas");
         driver.findElement(COUNTRY).sendKeys("France");
@@ -162,6 +156,10 @@ class Demoblaze {
         Assertions.assertEquals("Thank you for your purchase!", purchased);
 
 
+                }
+
+
+            }
 
 
 
@@ -169,16 +167,6 @@ class Demoblaze {
 
 
 
-
-    }
-
-
-
-
-
-
-
-}
 
 
 

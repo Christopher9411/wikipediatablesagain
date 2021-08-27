@@ -290,7 +290,10 @@ public void digital() {
 }
 
 
-
+@Test
+    public void blaze(){
+        blaze.clickMenuButton("Monitors");
+}
 
 
 
