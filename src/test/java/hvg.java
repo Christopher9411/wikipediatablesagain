@@ -18,6 +18,7 @@ public class hvg {
     public static final By ARTICLE_TEXT = By.xpath("/html/body/div[3]/div/div/main/div[1]/div/div/div[2]/div[1]/div[2]/div[4]/p[2]");
     public static final By MENU = By.xpath("//*[contains(@class,' group ul-elem')]");
     public static final By ACCEPT_COOKIES = By.xpath("//*[@id=\"qc-cmp2-ui\"]/div[2]/div/button[3]");
+    public static final By POPUP= By.xpath("//*[@id=\"blockWebPushBtnId\"]");
 
 //https://hvg.hu/
     public static void news() {
@@ -38,13 +39,17 @@ public class hvg {
         }
     }
 
-public static void clickonmenu(){
+public static void clickonmenu(String click){
     WebDriver driver = Util.getDriver();
     WebDriverWait wait = new WebDriverWait(driver,10);
-    wait.until(ExpectedConditions.visibilityOfElementLocated(ACCEPT_COOKIES)).click();
+    wait.until(ExpectedConditions.visibilityOfElementLocated(POPUP));
+    WebElement popup= driver.findElement(POPUP);
+    popup.click();
     List<WebElement> table = driver.findElements(MENU);
-    if(table.size()>0){
-        table.get(0).click();
+    for(WebElement tables : table){
+       if (tables.getText().contains("Tech")){
+           tables.click();
+       }
     }
 }
 

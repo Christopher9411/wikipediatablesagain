@@ -29,7 +29,7 @@ public class TableTest {
 
     @Test
     public void demoblaze() {
-        Demoblaze.purchase();
+        DemoBlaze.purchase();
 
 
     }
@@ -278,14 +278,14 @@ public void magyarnarancs(){}
 
 @Test
     public void hvg_menu(){
-        hvg.clickonmenu();
+        hvg.clickonmenu("Vállalkozás");
 }
 
 
 @Test
 public void digital() {
     eDigital.open_menu();
-    eDigital.shopper("Könyv & Irodatechnika");
+    eDigital.shopper("TV, Audio és Konzol");
     eDigital.browse();
 }
 
@@ -297,6 +297,85 @@ public void digital() {
 
 
 
+@Test
+    public void mediamarkt(){
+        Media.menuelement();
+}
+
+
+
+@Test
+    public void Selenium(){
+        SeleniumEasy.menza();
+}
+
+
+
+@Test
+    public void auchan(){
+    Auchan.tagname();
+}
+
+
+
+
+@Test
+    public void FindAllLinksonSite(){
+        FindAllLinksonSite.linkhuting();
+}
+
+
+@Test
+   public void writetotable() throws IOException {
+        DemoBlaze.table_iteration();
+
+}
+
+
+@Test
+    public void IKK_ITERATE_TO_TABLE() throws IOException {
+        IKK.cookie();
+        IKK.navigate();
+}
+
+
+
+
+
+    @Test
+    public void getTitleTest() throws IOException {
+        IKK.cookies();
+        List<String> result = IKK.fullListAlchemist();
+
+    }
+
+
+
+    @Test
+    public void tablepress(){
+        TablePress.table_iteration();
+    }
+
+
+    @Test
+    public void tablepress2(){
+        TablePress.table_iteration2();
+    }
+
+
+
+    @Test
+    public void tablepress_print() throws IOException {
+        TablePress.table_move_and_print();
+    }
+
 
 
 }
+
+
+
+
+
+
+

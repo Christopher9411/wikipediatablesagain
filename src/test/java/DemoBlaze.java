@@ -8,6 +8,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
@@ -17,7 +18,7 @@ import java.util.concurrent.TimeUnit;
 import static org.openqa.selenium.By.xpath;
 
 //https://www.demoblaze.com/
-class Demoblaze {
+class DemoBlaze {
     static WebDriver driver = Util.getDriver();
     //  private static final By TABLE = xpath("//*[@id=\"itemc\"]");
     private static final By TABLE = xpath("/html/body/div[5]/div/div[1]/div");
@@ -42,6 +43,8 @@ class Demoblaze {
     private static final By PURCHASE = By.xpath(" //*[contains(text(),'Purchase')]");
     private static final By CONFIRM_OKAY = By.xpath(" //*[contains(text(),'OK')]");
     private static final By CART = By.xpath("//*[@id='cartur']");
+    public static final By TABLES = By.xpath(" //*[contains(@class,'col-lg-4 col-md-6 mb-4')]");
+    public static final By NEXT_BUTTON = By.xpath("//button[@id='next2']");
 
 
     public static void menu() {
@@ -157,6 +160,28 @@ class Demoblaze {
 
 
                 }
+
+
+
+
+          public static void table_iteration() throws IOException {
+          String isButtonIsActive = driver.findElement(NEXT_BUTTON).getAttribute("class");
+          FileWriter file = new FileWriter("products.txt");
+          while (!isButtonIsActive.contains("disabled")){
+              isButtonIsActive = driver.findElement(NEXT_BUTTON).getAttribute("class");
+              List<WebElement>tables = driver.findElements(TABLES);
+              for (WebElement table : tables) {
+                  System.out.println(table.getText());
+                  String data = table.getText();
+                  file.write(data+"\n");
+              }
+              driver.findElement(NEXT_BUTTON).click();
+          }
+          file.close();
+
+          }
+
+
 
 
             }
