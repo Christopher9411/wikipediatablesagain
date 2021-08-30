@@ -19,7 +19,11 @@ public class SeleniumEasy {
     public static final By AlERT_ACCEPT = By.xpath("/html/body/div[2]/div/div[2]/div[1]/div/div/div[2]/a");
     public static final By DROPDOWN_MENU = By.xpath("/html/body/div[1]/div[2]/nav/div/div[2]/ul[1]/li[1]/a");
     public static final By COOKIE = By.xpath("//*[@id=\"at-cv-lightbox-button-holder\"]/a[2]");
-
+    public static final By RADIO_BUTTON = By.xpath("/html/body/div[2]/div/div[2]/div[1]/div[2]/label[1]/input");
+    public static final By RADIO_CLICK = By.xpath("//button[@id='buttoncheck']");
+    public static final By GROUPGENDER = By.xpath("/html/body/div[2]/div/div[2]/div[2]/div[2]/div[1]/label[1]/input");
+    public static final By GROUPGAGE = By.xpath("/html/body/div[2]/div/div[2]/div[2]/div[2]/div[2]/label[1]/input");
+    public static final By GROUPVALUES = By.xpath("/html/body/div[2]/div/div[2]/div[2]/div[2]/button");
 
     //https://www.seleniumeasy.com/test/basic-first-form-demo.html
     public static void seleniumsum() {
@@ -52,7 +56,7 @@ public class SeleniumEasy {
 
     public static void menza() {
         WebDriver driver = Util.getDriver();
-        WebDriverWait wait = new WebDriverWait(driver,9);
+        WebDriverWait wait = new WebDriverWait(driver, 9);
         wait.until(ExpectedConditions.visibilityOfElementLocated(COOKIE)).click();
         Select select = new Select(driver.findElement(DROPDOWN_MENU));
         select.selectByValue("Simple Form Demo");
@@ -61,4 +65,26 @@ public class SeleniumEasy {
     }
 
 
-}
+    public static void radio() {
+        WebDriver driver = Util.getDriver();
+        WebElement radio = driver.findElement(RADIO_BUTTON);
+        radio.click();
+        WebElement radio_click = driver.findElement(RADIO_CLICK);
+        radio_click.click();
+    }
+
+
+
+        public static void groupradio(){
+            WebDriver driver = Util.getDriver();
+            WebElement radiogender = driver.findElement(GROUPGENDER);
+            radiogender.click();
+            WebElement radioage = driver.findElement(GROUPGAGE);
+            radiogender.click();
+            WebElement getvalues = driver.findElement(GROUPVALUES);
+
+
+        }
+
+
+    }

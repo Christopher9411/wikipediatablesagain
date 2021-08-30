@@ -370,6 +370,30 @@ public void digital() {
     }
 
 
+    @Test
+    public void radio_button(){
+        SeleniumEasy.radio();
+    }
+
+
+@Test
+public void groupradiobutton(){
+        SeleniumEasy.groupradio();
+}
+
+
+
+    @AfterEach
+    public void Close () {
+        driver.close();
+
+
+    }
+
+
+
+
+
 
 }
 

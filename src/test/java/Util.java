@@ -19,7 +19,7 @@ public class Util {
             options.setExperimentalOption("useAutomationExtension", true);
             options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
             driver = new ChromeDriver(options);
-            driver.get("https://tablepress.org/demo/");
+            driver.get("https://www.seleniumeasy.com/test/basic-radiobutton-demo.html");
             driver.manage().deleteAllCookies();
 
         }
